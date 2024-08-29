@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,14 +14,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
 </head>
 </head>
+
 <body>
     <!-- Header con logo y menú de navegación -->
-    <header class="container-fluid py-3">
+    <header class="container-fluid align-items-center">
         <div class="row align-items-center">
             <div id="cont-logo" class="col-6 col-md-2">
                 <img id="logo" src="assets/images/logo_azul_horizontal.png" alt="Grupo LATBC Logo" class="img-fluid">
             </div>
-            <div id="menu" class="col-5 col-md-6">
+            <div id="menu" class="col-6 col-md-6">
                 <nav>
                     <ul class="nav justify-content-center">
                         <li class="nav-item"><a class="nav-link" href="#">About</a></li>
@@ -44,11 +46,9 @@
     <section class="main-section text-left py-2">
         <div class="container">
             <div class="row">
-                <h1 id="texto-1" class="display-4">Sien lorem</h1>
-                <div id="logo-solo-lat"> 
-                    <img src="assets/images/imago_grupo_latbc.svg" alt="">
-                </div>
-                <h1 id="texto-2" class="display-4">Lorem Ipsum.</h1>
+                <h1 id="texto-1" class="">Sien lorem</h1>
+
+                <h1 id="texto-2" class="">Lorem Ipsum.</h1>
                 <div class="color-palette mt-4">
                     <div class="color-box color1 mx-2"></div>
                     <div class="color-box color2 mx-2"></div>
@@ -57,7 +57,6 @@
                     <div class="color-box color5 mx-2"></div>
                     <div class="color-box color6 mx-2"></div>
                     <div class="color-box color7 mx-2"></div>
-                    <!-- Botón circular con la imagen de la flecha -->
                     <div class="scroll-indicator">
                         <button id="scroll-button" class="btn-circle">
                             <img src="assets/images/hero-button.svg" alt="Flecha" class="flecha-img">
@@ -65,48 +64,105 @@
                     </div>
                 </div>
             </div>
+
             
-            
-            
+
             <div id="mensaje" class="row">
-                <div class="col-md-2">
+                <div id="mensaje1" class="col-md-2">
                     <p>LOREM IPSUM DOLOR SIT AMET</p>
                 </div>
-                <div class="col-md-5 text-left">
-                    <p>Lorem ipsum dolor sit amet, consectetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam era.</p>
-                </div>
-            </div>
-        </div>
-    </section>    
-
-    <section id="empresas-section" class="custom-section">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-2 custom-column bg-dark-blue">
-                    <img src="assets/images/logo_blanco_latbc_vertical.png" alt="Latbc Logo" class="img-fluid">
-                </div>
-                <div class="col-md-2 custom-column bg-purple">
-                    <img src="assets/images/purple-logo.svg" alt="X Logo" class="img-fluid">
-                </div>
-                <div class="col-md-2 custom-column bg-blue">
-                    <img src="assets/images/share-logo.svg" alt="S Logo" class="img-fluid">
-                </div>
-                <div class="col-md-2 custom-column bg-red">
-                    <img src="assets/images/red-logo.svg" alt="S Logo" class="img-fluid">
-                </div>
-                <div class="col-md-2 custom-column bg-white">
-                    <h2 class="text-dark-blue">BLUE</h2>
-                </div>
-                <div class="col-md-2 custom-column bg-orange">
-                    <img src="assets/images/logo_ux_spaces.png" alt="UX Spaces Logo" class="img-fluid">
+                <div id="mensaje2" class="col-md-4 text-left">
+                    <p>Lorem ipsum dolor sit amet, consectetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                        ut labore et dolore magna aliquyam era.</p>
                 </div>
             </div>
         </div>
     </section>
-    
 
+    <section id="empresas-section" class="custom-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="custom-column bg-dark-blue" data-target="#latbc-info">
+                    <img src="assets/images/grupo-latbc-logo.svg" alt="Latbc Logo" class="img-fluid">
+                </div>
+                <div class="custom-column bg-purple">
+                    <img src="assets/images/purple-logo.svg" alt="X Logo" class="img-fluid">
+                </div>
+                <div class="custom-column bg-blue">
+                    <img src="assets/images/share-logo.svg" alt="S Logo" class="img-fluid">
+                </div>
+                <div class="custom-column bg-red">
+                    <img src="assets/images/red-logo-curvas.svg" alt="S Logo" class="img-fluid">
+                </div>
+                <div class="custom-column bg-white">
+                    <img src="assets/images/blue-logo-curvas.svg" alt="S Logo" class="img-fluid">
+                </div>
+                <div class="custom-column bg-orange">
+                    <img src="assets/images/ux-logo.svg" alt="UX Spaces Logo" class="img-fluid">
+                </div>
+                <div class="custom-column bg-white">
+                    <img src="assets/images/byo-logo.svg" alt="Latbc Logo" class="img-fluid">
+                </div>
+                <div class="scroll-indicator-back">
+                    <button id="scroll-button-back" class="btn-circle">
+                        <img src="assets/images/hero-button.svg" alt="Flecha" class="flecha-img-back">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="about-section">
+        <div class="container">
+            <div class="row">
+                <div id="logo-solo-lat">
+                    <img src="assets/images/grupo-latbc-logo.svg" alt="">
+                </div>
+                <div class="pattern-lat">
+                    <img src="assets/images/grupo-latbc-pattern.svg" alt="">
+                </div>
+                <div class="text-div mt-4">
+                    <div class="text-box color7 mx-2">
+                        <h1>Acerca de Latbc <br></h1>
+                        <p> Somos Latbc, una empresa de consultoría tecnológica de primer nivel. Fundada en 2003 en la Ciudad de México, hemos entregado a lo largo de 20 años más de 250 proyectos exitosos en Estados Unidos y Centro y Sudamérica, con miles de increíbles colaboradores.</p>
+                        <div class="row">
+                            <div>
+                                <h1>"</h1>
+                            </div>
+                            <div>
+                                <p> «Sabemos que los datos son ilimitados y se convertirán en el combustible de la economía».</p>
+                            </div>
+                        </div> 
+                        <p>Xavier Espinosa de los Monteros A.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col custom-column bg-dark-blue" data-target="#latbc-info">
+                    </div>
+                    <div class="col custom-column bg-purple">
+                    </div>
+                    <div class="col custom-column bg-blue">
+                    </div>
+                    <div class="col custom-column bg-red">
+                    </div>
+                    <div class="col custom-column bg-white">
+                    </div>
+                    <div class="col custom-column bg-orange">
+                    </div>
+                    <div class="col custom-column bg-white">
+                    </div>
+                    <div class="scroll-indicator-back">
+                        <button id="scroll-button-back" class="btn-circle">
+                            <img src="assets/images/hero-button.svg" alt="Flecha" class="flecha-img-back">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    
     <!-- Sección inferior -->
-    <footer class="footer py-2">
+    <footer class="footer py-1">
         <div class="container">
             <div class="footer-nav text-center mt-3">
                 <ul class="nav justify-content-center">
@@ -117,7 +173,7 @@
                     <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
                 </ul>
             </div>
-            
+
             <p class="text-center mt-3">Grupo Latbc © 2024 UI UX By Sharelytics</p>
         </div>
     </footer>
@@ -128,4 +184,5 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
