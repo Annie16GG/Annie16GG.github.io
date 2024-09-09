@@ -116,6 +116,75 @@ document.getElementById("scroll-button-back").addEventListener("click", function
 
 const columns = document.querySelectorAll('.custom-column');
 
+// Seleccionar los divs de text-div y pattern-lat correctamente
+const textDiv = document.getElementById('text-div');
+const patternLat = document.getElementById('pattern-lat');
+const patternPurple = document.getElementById('pattern-purple');
+const empresaLogo = document.getElementById('empresa-logo');
+
+// Función para animar la aparición de los divs
+function animateTextAndPattern() {
+    // Animar el text-div desde la derecha
+    gsap.fromTo(textDiv, 
+        { 
+            opacity: 0, 
+            x: "-200%",  // Inicia fuera de la pantalla, a la derecha
+            zIndex: 10  // Asegura que el text-div esté por encima del div expandido
+        }, 
+        { 
+            duration: 1.5, 
+            x: "0%",  // Se coloca completamente dentro del div expandido
+            opacity: 1,
+            ease: "power2.out"
+        }
+    );
+    
+    // Animar el pattern-lat desde arriba
+    gsap.fromTo(patternLat,  
+        { 
+            opacity: 0, 
+            y: "-100%",  // Inicia fuera de la pantalla, solo en el eje Y (arriba)
+            x: "0%",     // Mantiene la posición horizontal sin moverse en el eje X
+            zIndex: 5    // Coloca pattern-lat por debajo de text-div si es necesario
+        }, 
+        { 
+            duration: 1.5, 
+            y: "0%",      // Se coloca en su posición final en el eje Y
+            opacity: 1,   // Aparece gradualmente
+            ease: "power2.out",
+            delay: 0.5    // Aparece después del text-div
+        }
+    );
+
+    gsap.fromTo(patternPurple,  
+        { 
+            opacity: 0, 
+            y: "-100%",  // Inicia fuera de la pantalla, solo en el eje Y (arriba)
+            x: "0%",     // Mantiene la posición horizontal sin moverse en el eje X
+            zIndex: 5    // Coloca pattern-lat por debajo de text-div si es necesario
+        }, 
+        { 
+            duration: 1.5, 
+            y: "0%",      // Se coloca en su posición final en el eje Y
+            opacity: 1,   // Aparece gradualmente
+            ease: "power2.out",
+            delay: 0.5    // Aparece después del text-div
+        }
+    );
+    
+
+    // Expandir el logo de la empresa
+    gsap.to(empresaLogo, {
+        duration: 1,
+        width: "234px",  // Tamaño final del logo
+        height: "234px",
+        top: "20%",
+        left: "20%",
+        ease: "power2.out"
+    });
+}
+
+// Evento click para las columnas
 columns.forEach((column, index) => {
     column.addEventListener('click', () => {
         const isExpanded = column.classList.contains('expanded');
@@ -126,11 +195,16 @@ columns.forEach((column, index) => {
         // Reseteamos todas las columnas
         columns.forEach((col, colIndex) => {
             if (col !== column) {
-                col.classList.remove('expanded');
+                // Remueve la clase 'original' si está presente
+                col.classList.remove('original');
+                
+                // Agrega 'collapsed' a todas las columnas que no están siendo clickeadas
                 col.classList.add('collapsed');
+                col.classList.remove('expanded');
 
-                let xOffset = colIndex < index ? '-300%' : '300%'; // Aumenta el desplazamiento para ocultar más
-                let clipPath = colIndex < index ? 'inset(0% 0% 0% -200%)' : 'inset(0% -200% 0% 0%)'; // Aumenta el recorte
+                // Animación para contraer columnas no seleccionadas
+                let xOffset = colIndex < index ? '-300%' : '300%';
+                let clipPath = colIndex < index ? 'inset(0% 0% 0% -200%)' : 'inset(0% -200% 0% 0%)';
 
                 gsap.to(col.querySelector('img'), { 
                     x: xOffset, 
@@ -138,23 +212,31 @@ columns.forEach((column, index) => {
                     duration: 1 
                 });
                 gsap.to(col, { 
-                    flex: 0.2, 
+                    flex: 0.25, 
                     duration: 1 
                 });
             }
         });
 
-        // Expandimos la columna seleccionada
-        column.classList.remove('collapsed');
+        // Remueve la clase 'original' de la columna seleccionada
+        column.classList.remove('original');
+        // Agrega 'expanded' a la columna clickeada
         column.classList.add('expanded');
+        column.classList.remove('collapsed');
+
+        // Animación para expandir la columna seleccionada
         gsap.to(column.querySelector('img'), { 
             x: "0%", 
             clipPath: 'inset(0%)', 
             duration: 1 
         });
         gsap.to(column, { 
-            flex: 10, 
+            flex: 15, 
             duration: 1 
         });
+
+        // Ejecutar la animación de text-div, pattern-lat y empresa-logo
+        animateTextAndPattern();
     });
 });
+
