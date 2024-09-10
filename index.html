@@ -8,6 +8,12 @@
     <!-- Integración de Bootstrap -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <!-- Incluir GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"></script>
     <!-- Incluir ScrollToPlugin -->
@@ -85,88 +91,228 @@
                 <div class="custom-column original bg-dark-blue">
                     <img id="empresa-logo" src="assets/images/grupo-latbc-logo.svg" alt="Latbc Logo" class="img-fluid">
                     <img id="pattern-lat" class="hidden" src="assets/images/grupo-latbc-pattern.svg" alt="">
-                    <div id="text-div" class="hidden mt-4">
-                        <div class="text-box color7 mx-2">
-                            <h1 style="font-size: 46px; padding-top: 10px; color: #0D0D0D;">Acerca de Latbc <br></h1>
-                            <p id="parrafo-lat">Somos Latbc, una empresa de consultoría tecnológica de primer nivel. Fundada en 2003 en la Ciudad de México, hemos entregado a lo largo de 20 años más de 250 proyectos exitosos en Estados Unidos y Centro y Sudamérica, con miles de increíbles colaboradores.</p>
-                            <p style="font-size: 20px; color: #0D0D0D;">"Sabemos que los datos son ilimitados y se convertirán en el combustible de la economía."</p>
-                            <p style="font-size: 18px; color:#383838">Xavier Espinosa de los Monteros A.</p>
+                    <div id="text-div" class="original hidden mt-4">
+                        <div class="text-box color5 mx-2">
+                            <h1
+                                style="font-size: 46px; padding-top: 8px; color: #0D0D0D; line-height: 1.2; font-weight: 400;">
+                                Acerca de Latbc <br></h1>
+                            <p id="parrafo-lat" style="line-height: 1.3; justify-content: center;">Somos Latbc, una
+                                empresa de consultoría tecnológica de primer nivel. Fundada en 2003 en la Ciudad de
+                                México, hemos entregado a lo largo de 20 años más de 250 proyectos exitosos en Estados
+                                Unidos y Centro y Sudamérica, con miles de increíbles colaboradores.</p>
+
+                            <!-- Comillas e imagen alineadas al texto -->
+                            <div style="display: flex; align-items: center;">
+                                <img src="assets/images/Captura.PNG" alt="Imagen pequeña"
+                                    style="width:45px; height: 25px; margin-bottom: 15px;">
+                                <p
+                                    style="margin-left: 15px; font-size: 20px; font-weight:300; color: #0D0D0D; line-height: 1.3;">
+                                    Sabemos que los datos son ilimitados y se convertirán en el combustible de la
+                                    economía».</p>
+                            </div>
+
+                            <!-- Centrado del círculo y nombre -->
+                            <div style="display: flex; margin-left: 10%; align-items: center; margin-top: 10px;">
+                                <div
+                                    style="width: 40px; height: 40px; border-radius: 50%; background-color: #e0e0e0d1; margin-right: 15px;">
+                                    <!-- Aquí se podrá agregar una imagen más tarde -->
+                                </div>
+                                <p style="font-size: 18px; color:#383838; margin: 0; line-height: 1.2;">Xavier Espinosa
+                                    de los Monteros A.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="custom-column original bg-purple">
-                    <img id="empresa-purple" src="assets/images/purple-logo.svg" alt="X Logo" class="img-fluid">
+                        <img id="empresa-purple" src="assets/images/purple-logo.svg" alt="X Logo" class="img-fluid">
+                        <p id="purple-ideas" class="poppins-medium" style="font-size: 49px; color: white;">Purple Ideas</p>
+
                     <img id="pattern-purple" class="hidden" src="assets/images/purple-pattern.svg" alt="">
-                    <div id="text-div" class="hidden mt-4">
+                    <div id="text-div" class="original hidden mt-4">
                         <div class="text-box-purple color5 mx-2">
-                            <h1 style="font-size: 46px; padding-top: 10px; color: #0D0D0D;">Lorem ipsum dolor sit<br></h1>
-                            <p id="parrafo">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua vero eos.</p>
-                            <p style="font-size: 20px; color: #0D0D0D;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
-                            <p style="font-size: 18px; color:#383838">Lorem ipsum</p>
+                            <h1
+                                style="font-size: 46px; padding-top: 8px; padding-right:60px; color: #0D0D0D; line-height: 1.2; font-weight: 400;">
+                                Lorem ipsum dolor sit<br></h1>
+                            <p id="parrafo" style="line-height: 1.3;">Lorem ipsum dolor sit amet, consetetur sadipscing
+                                elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                                sed diam voluptua vero eos.</p>
+
+                            <div style="display: flex; align-items: center;">
+                                <img src="assets/images/Captura.PNG" alt="Imagen pequeña"
+                                    style="width:45px; height: 25px; margin-bottom: 15px;">
+                                <p
+                                    style="margin-left: 15px; font-size: 20px; font-weight:300; color: #0D0D0D; line-height: 1.3;">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+                            </div>
+                            <!-- Centrado del círculo y nombre -->
+                            <div style="display: flex; margin-left: 10%; align-items: center; margin-top: 10px;">
+                                <div
+                                    style="width: 40px; height: 40px; border-radius: 50%; background-color: #e0e0e0d1; margin-right: 15px;">
+                                    <!-- Aquí se podrá agregar una imagen más tarde -->
+                                </div>
+                                <p style="font-size: 18px; color:#383838; margin: 0; line-height: 1.2;">Lorem ipsum</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="custom-column original bg-blue">
                     <img id="empresa-logo" src="assets/images/share-logo.svg" alt="S Logo" class="img-fluid">
-                    <img id="pattern-purple" class="hidden" src="assets/images/share-pattern.svg" alt="">
-                    <div id="text-div" class="hidden mt-4">
-                        <div class="text-box-purple color5 mx-2">
-                            <h1 style="font-size: 46px; padding-top: 10px; color: #0D0D0D;">Lorem ipsum dolor sit<br></h1>
-                            <p id="parrafo">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua vero eos.</p>
-                            <p style="font-size: 20px; color: #0D0D0D;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
-                            <p style="font-size: 18px; color:#383838">Lorem ipsum</p>
+                    <img id="pattern-share" class="hidden" src="assets/images/share-pattern.svg" alt="">
+                        <div id="text-div" class=" original hidden mt-4">
+                            <div class="text-box-purple color5 mx-2">
+                                <h1
+                                    style="font-size: 46px; padding-top: 8px; padding-right:60px; color: #0D0D0D; line-height: 1.2; font-weight: 400;">
+                                    Lorem ipsum dolor sit<br></h1>
+                                <p id="parrafo" style="line-height: 1.3;">Lorem ipsum dolor sit amet, consetetur
+                                    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                                    aliquyam erat, sed diam voluptua vero eos.</p>
+
+                                <div style="display: flex; align-items: center;">
+                                    <img src="assets/images/Captura.PNG" alt="Imagen pequeña"
+                                        style="width:45px; height: 25px; margin-bottom: 15px;">
+                                    <p
+                                        style="margin-left: 15px; font-size: 20px; font-weight:300; color: #0D0D0D; line-height: 1.3;">
+                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+                                </div>
+                                <!-- Centrado del círculo y nombre -->
+                                <div style="display: flex; margin-left: 10%; align-items: center; margin-top: 10px;">
+                                    <div
+                                        style="width: 40px; height: 40px; border-radius: 50%; background-color: #e0e0e0d1; margin-right: 15px;">
+                                        <!-- Aquí se podrá agregar una imagen más tarde -->
+                                    </div>
+                                    <p style="font-size: 18px; color:#383838; margin: 0; line-height: 1.2;">Lorem ipsum
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
                 </div>
+
                 <div class="custom-column original bg-red">
-                    <img id="empresa-logo" src="assets/images/red_logo_curvas_2_blanco.svg" alt="S Logo" class="img-fluid">
-                    <img id="pattern-purple" class="hidden" src="assets/images/red-pattern.svg" alt="">
-                    <div id="text-div" class="hidden mt-4">
+                    <img id="empresa-logo-red" src="assets/images/red_logo_curvas_2_blanco.svg" alt="S Logo" class="img-fluid">
+                    <img id="pattern-red" class="hidden" src="assets/images/red-pattern.svg" alt="">
+                    <div id="text-div-red" class="original hidden mt-4">
                         <div class="text-box-purple color5 mx-2">
-                            <h1 style="font-size: 46px; padding-top: 10px; color: #0D0D0D;">Lorem ipsum dolor sit<br></h1>
-                            <p id="parrafo">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua vero eos.</p>
-                            <p style="font-size: 20px; color: #0D0D0D;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
-                            <p style="font-size: 18px; color:#383838">Lorem ipsum</p>
+                            <h1
+                                style="font-size: 46px; padding-top: 8px; padding-right:60px; color: #0D0D0D; line-height: 1.2; font-weight: 400;">
+                                Lorem ipsum dolor sit<br></h1>
+                            <p id="parrafo" style="line-height: 1.3;">Lorem ipsum dolor sit amet, consetetur sadipscing
+                                elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                                sed diam voluptua vero eos.</p>
+
+                            <div style="display: flex; align-items: center;">
+                                <img src="assets/images/Captura.PNG" alt="Imagen pequeña"
+                                    style="width:45px; height: 25px; margin-bottom: 15px;">
+                                <p
+                                    style="margin-left: 15px; font-size: 20px; font-weight:300; color: #0D0D0D; line-height: 1.3;">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+                            </div>
+                            <!-- Centrado del círculo y nombre -->
+                            <div style="display: flex; margin-left: 10%; align-items: center; margin-top: 10px;">
+                                <div
+                                    style="width: 40px; height: 40px; border-radius: 50%; background-color: #e0e0e0d1; margin-right: 15px;">
+                                    <!-- Aquí se podrá agregar una imagen más tarde -->
+                                </div>
+                                <p style="font-size: 18px; color:#383838; margin: 0; line-height: 1.2;">Lorem ipsum</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="custom-column original bg-white">
-                    <img id="empresa-logo" src="assets/images/blue-logo-curvas.svg" alt="S Logo" class="img-fluid">
-                    <img id="pattern-purple" class="hidden" src="assets/images/blue-pattern.svg" alt="">
-                    <div id="text-div" class="hidden mt-4">
+                    <img id="empresa-logo-blue" src="assets/images/blue-logo-curvas.svg" alt="S Logo" class="img-fluid">
+                    <img id="pattern-blue" class="hidden" src="assets/images/blue-pattern.svg" alt="">
+                    <div id="text-div-blue" class="original hidden mt-4">
                         <div class="text-box-purple color5 mx-2">
-                            <h1 style="font-size: 46px; padding-top: 10px; color: #0D0D0D;">Lorem ipsum dolor sit<br></h1>
-                            <p id="parrafo">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua vero eos.</p>
-                            <p style="font-size: 20px; color: #0D0D0D;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
-                            <p style="font-size: 18px; color:#383838">Lorem ipsum</p>
+                            <h1
+                                style="font-size: 46px; padding-top: 8px; padding-right:60px; color: #0D0D0D; line-height: 1.2; font-weight: 400;">
+                                Lorem ipsum dolor sit<br></h1>
+                            <p id="parrafo" style="line-height: 1.3;">Lorem ipsum dolor sit amet, consetetur sadipscing
+                                elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                                sed diam voluptua vero eos.</p>
+
+                            <div style="display: flex; align-items: center;">
+                                <img src="assets/images/Captura.PNG" alt="Imagen pequeña"
+                                    style="width:45px; height: 25px; margin-bottom: 15px;">
+                                <p
+                                    style="margin-left: 15px; font-size: 20px; font-weight:300; color: #0D0D0D; line-height: 1.3;">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+                            </div>
+                            <!-- Centrado del círculo y nombre -->
+                            <div style="display: flex; margin-left: 10%; align-items: center; margin-top: 10px;">
+                                <div
+                                    style="width: 40px; height: 40px; border-radius: 50%; background-color: #e0e0e0d1; margin-right: 15px;">
+                                    <!-- Aquí se podrá agregar una imagen más tarde -->
+                                </div>
+                                <p style="font-size: 18px; color:#383838; margin: 0; line-height: 1.2;">Lorem ipsum</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="custom-column original bg-orange">
-                    <img id="empresa-logo" src="assets/images/ux-logo.svg" alt="UX Spaces Logo" class="img-fluid">
-                    <img id="pattern-purple" class="hidden" src="assets/images/ux-pattern.svg" alt="">
-                    <div id="text-div" class="hidden mt-4">
+                    <img id="empresa-logo-ux" src="assets/images/ux-logo.svg" alt="UX Spaces Logo" class="img-fluid original">
+                    <img id="pattern-ux" class="hidden" src="assets/images/ux-pattern.svg" alt="">
+                    <div id="text-div-ux" class="original hidden mt-4">
                         <div class="text-box-purple color5 mx-2">
-                            <h1 style="font-size: 46px; padding-top: 10px; color: #0D0D0D;">Lorem ipsum dolor sit<br></h1>
-                            <p id="parrafo">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua vero eos.</p>
-                            <p style="font-size: 20px; color: #0D0D0D;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
-                            <p style="font-size: 18px; color:#383838">Lorem ipsum</p>
+                            <h1
+                                style="font-size: 46px; padding-top: 8px; padding-right:60px; color: #0D0D0D; line-height: 1.2; font-weight: 400;">
+                                Lorem ipsum dolor sit<br></h1>
+                            <p id="parrafo" style="line-height: 1.3;">Lorem ipsum dolor sit amet, consetetur sadipscing
+                                elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                                sed diam voluptua vero eos.</p>
+
+                            <div style="display: flex; align-items: center;">
+                                <img src="assets/images/Captura.PNG" alt="Imagen pequeña"
+                                    style="width:45px; height: 25px; margin-bottom: 15px;">
+                                <p
+                                    style="margin-left: 15px; font-size: 20px; font-weight:300; color: #0D0D0D; line-height: 1.3;">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+                            </div>
+                            <!-- Centrado del círculo y nombre -->
+                            <div style="display: flex; margin-left: 10%; align-items: center; margin-top: 10px;">
+                                <div
+                                    style="width: 40px; height: 40px; border-radius: 50%; background-color: #e0e0e0d1; margin-right: 15px;">
+                                    <!-- Aquí se podrá agregar una imagen más tarde -->
+                                </div>
+                                <p style="font-size: 18px; color:#383838; margin: 0; line-height: 1.2;">Lorem ipsum</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="custom-column original bg-white-1">
-                    <img id="empresa-logo" src="assets/images/byo-logo.svg" alt="Latbc Logo" class="img-fluid">
-                    <img id="pattern-purple" class="hidden" src="assets/images/byo-pattern.svg" alt="">
-                    <div id="text-div" class="hidden mt-4">
+                    <img id="empresa-logo-byo" src="assets/images/byo-logo.svg" alt="BYO Logo" class="img-fluid">
+                    <img id="pattern-byo" class="hidden" src="assets/images/byo-pattern.svg" alt="">
+                    <div id="text-div-byo" class="original hidden mt-4">
                         <div class="text-box-purple color5 mx-2">
-                            <h1 style="font-size: 46px; padding-top: 10px; color: #0D0D0D;">Lorem ipsum dolor sit<br></h1>
-                            <p id="parrafo">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua vero eos.</p>
-                            <p style="font-size: 20px; color: #0D0D0D;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
-                            <p style="font-size: 18px; color:#383838">Lorem ipsum</p>
+                            <h1
+                                style="font-size: 46px; padding-top: 8px; padding-right:60px; color: #0D0D0D; line-height: 1.2; font-weight: 400;">
+                                Lorem ipsum dolor sit<br></h1>
+                            <p id="parrafo" style="line-height: 1.3;">Lorem ipsum dolor sit amet, consetetur sadipscing
+                                elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                                sed diam voluptua vero eos.</p>
+
+                            <div style="display: flex; align-items: center;">
+                                <img src="assets/images/Captura.PNG" alt="Imagen pequeña"
+                                    style="width:45px; height: 25px; margin-bottom: 15px;">
+                                <p
+                                    style="margin-left: 15px; font-size: 20px; font-weight:300; color: #0D0D0D; line-height: 1.3;">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+                            </div>
+                            <!-- Centrado del círculo y nombre -->
+                            <div style="display: flex; margin-left: 10%; align-items: center; margin-top: 10px;">
+                                <div
+                                    style="width: 40px; height: 40px; border-radius: 50%; background-color: #e0e0e0d1; margin-right: 15px;">
+                                    <!-- Aquí se podrá agregar una imagen más tarde -->
+                                </div>
+                                <p style="font-size: 18px; color:#383838; margin: 0; line-height: 1.2;">Lorem ipsum</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="scroll-indicator-back">
                     <button id="scroll-button-back" class="btn-circle">
                         <img src="assets/images/hero-button.svg" alt="Flecha" class="flecha-img-back">
@@ -194,6 +340,9 @@
             <p class="text-center mt-3">Grupo Latbc © 2024 UI UX By Sharelytics</p>
         </div>
     </footer>
+
+
+    <div id="overlay"></div>
 
     <!-- Integración de scripts de Bootstrap -->
     <script src="assets/js/script.js"></script>
