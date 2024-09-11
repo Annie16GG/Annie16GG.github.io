@@ -171,7 +171,7 @@ function animateTextAndPattern() {
             marginLeft: "200%",  // Inicia fuera de la pantalla a la derecha
         }, 
         { 
-            duration: 0.3,  
+            duration: 0.2,  
             marginLeft: "50%",  // Se coloca dentro del div expandido (ajusta según sea necesario)
             opacity: 1,
             ease: "power2.out"
@@ -184,7 +184,7 @@ function animateTextAndPattern() {
             marginLeft: "200%",  // Inicia fuera de la pantalla a la derecha
         }, 
         { 
-            duration: 0.3,  
+            duration: 0.2,  
             marginLeft: "50%",  // Se coloca dentro del div expandido (ajusta según sea necesario)
             opacity: 1,
             ease: "power2.out"
@@ -197,7 +197,7 @@ function animateTextAndPattern() {
             marginLeft: "200%",  // Inicia fuera de la pantalla a la derecha
         }, 
         { 
-            duration: 0.3,  
+            duration: 0.2,  
             marginLeft: "50%",  // Se coloca dentro del div expandido (ajusta según sea necesario)
             opacity: 1,
             ease: "power2.out"
@@ -210,7 +210,7 @@ function animateTextAndPattern() {
             marginLeft: "200%",  // Inicia fuera de la pantalla a la derecha
         }, 
         { 
-            duration: 0.3,  
+            duration: 0.2,  
             marginLeft: "45%",  // Se coloca dentro del div expandido (ajusta según sea necesario)
             opacity: 1,
             ease: "power2.out"
@@ -223,7 +223,7 @@ function animateTextAndPattern() {
             marginLeft: "200%",  // Inicia fuera de la pantalla a la derecha
         }, 
         { 
-            duration: 0.3,  
+            duration: 0.2,  
             marginLeft: "40%",  // Se coloca dentro del div expandido (ajusta según sea necesario)
             opacity: 1,
             ease: "power2.out"
@@ -231,31 +231,30 @@ function animateTextAndPattern() {
     );
     
     // Animar el pattern-lat desde arriba
-    gsap.fromTo(patternLat,  
+    gsap.fromTo("#pattern-lat",  
         { 
             opacity: 0, 
-            y: "-100%",  // Inicia fuera de la pantalla, solo en el eje Y (arriba)
-            x: "0%",     // Mantiene la posición horizontal sin moverse en el eje X
+            top: "-100%"  // Inicia fuera de la pantalla
         }, 
         { 
             duration: 0.3,  
-            y: "0%",      // Se coloca en su posición final en el eje Y
-            opacity: 1,   // Aparece gradualmente
-            ease: "power2.out",
+            top: "0%",  // Se coloca en su posición final
+            opacity: 1,  // Aparece gradualmente
+            ease: "power2.out"
         }
     );
 
-    gsap.fromTo(patternPurple,  
+    // Si tienes otros patrones, puedes repetir este patrón de animación para cada uno
+    gsap.fromTo("#pattern-purple",  
         { 
             opacity: 0, 
-            y: "-100%",  // Inicia fuera de la pantalla, solo en el eje Y (arriba)
-            x: "0%",     // Mantiene la posición horizontal sin moverse en el eje X
+            top: "-100%"  // Inicia fuera de la pantalla
         }, 
         { 
             duration: 0.3,  
-            y: "0%",      // Se coloca en su posición final en el eje Y
-            opacity: 1,   // Aparece gradualmente
-            ease: "power2.out",
+            top: "-22%",  // Ajusta esta posición según sea necesario
+            opacity: 1,  // Aparece gradualmente
+            ease: "power2.out"
         }
     );
 
@@ -263,11 +262,12 @@ function animateTextAndPattern() {
         { 
             opacity: 0, 
             y: "-100%",  // Inicia fuera de la pantalla, solo en el eje Y (arriba)
-            x: "0%",     // Mantiene la posición horizontal sin moverse en el eje X
+            x: "80%",     // Mantiene la posición horizontal sin moverse en el eje X
         }, 
         { 
             duration: 0.3,  
             y: "0%",      // Se coloca en su posición final en el eje Y
+            x: "0%",
             opacity: 1,   // Aparece gradualmente
             ease: "power2.out",
         }
@@ -334,7 +334,6 @@ function animateTextAndPattern() {
         ease: "power2.out"
     });
 }
-
 function reverseAnimations() {
     // Animar text-divs para que desaparezcan hacia la derecha
     gsap.to("#text-div", {
@@ -356,7 +355,6 @@ function reverseAnimations() {
         duration: 0.2,
         ease: "power2.in"
     });
-    debugger;
     gsap.to("#text-div-ux", {
         opacity: 0,
         marginLeft: "200%",  // Se mueve fuera de la pantalla hacia la derecha
@@ -374,10 +372,9 @@ function reverseAnimations() {
     // Animar patterns para que desaparezcan hacia arriba
     gsap.to("#pattern-lat", {
         opacity: 0,
-        y: "-100%",  // Se mueve hacia arriba
+        top: "-80%",  // Se mueve hacia arriba
         duration: 0.2,
         ease: "power2.in",
-        delay: 0.2
     });
 
     gsap.to("#pattern-purple", {
@@ -385,7 +382,6 @@ function reverseAnimations() {
         y: "-100%",  // Se mueve hacia arriba
         duration: 0.2,
         ease: "power2.in",
-        delay: 0.5
     });
 
     gsap.to("#pattern-share", {
@@ -407,29 +403,67 @@ function reverseAnimations() {
     });    
 }
 
+const initialStyles = {
+    'empresa-logo': {
+        width: '90px',
+        top: "30%",
+        left: getComputedStyle(document.getElementById('empresa-logo')).left
+    },
+    'empresa-purple': {
+        width: '100px',
+        top: getComputedStyle(document.getElementById('empresa-purple')).top,
+        left: getComputedStyle(document.getElementById('empresa-purple')).left
+    },
+    'empresa-logo-red': {
+        width: '120px',
+        top: getComputedStyle(document.getElementById('empresa-logo-red')).top,
+        left: getComputedStyle(document.getElementById('empresa-logo-red')).left
+    },
+    'empresa-logo-blue': {
+        width: '110px',
+        top: getComputedStyle(document.getElementById('empresa-logo-blue')).top,
+        left: getComputedStyle(document.getElementById('empresa-logo-blue')).left
+    },
+    'empresa-logo-ux': {
+        width: '90px',
+        top: getComputedStyle(document.getElementById('empresa-logo-ux')).top,
+        left: getComputedStyle(document.getElementById('empresa-logo-ux')).left
+    },
+    'empresa-logo-byo': {
+        width: '85px',
+        top: getComputedStyle(document.getElementById('empresa-logo-byo')).top,
+        left: getComputedStyle(document.getElementById('empresa-logo-byo')).left
+    }
+};
+
 function restoreColumns() {
     // Ocultar el overlay
     overlay.style.display = 'none';
     
     // Animar los text-divs y patterns de regreso
     reverseAnimations();
+    
     // Restaurar todas las columnas
     columns.forEach((col) => {
         col.classList.remove('collapsed', 'expanded');
         col.classList.add('original');
         
-        // Restaurar el tamaño original
-        gsap.to(col.querySelector('img'), { 
-            x: "0%", 
-            clipPath: 'inset(0%)', 
-            duration: 0.2
-        });
         gsap.to(col, { 
             flex: 1,  // Ajusta según el tamaño inicial de las columnas
             duration: 0.2
         });
     });
 
+    // Restaurar los tamaños y posiciones originales de los logos
+    gsap.to('#empresa-logo', { width: '120px', x: 0, y: 0, duration: 0.5, delay: 0.2 });
+    gsap.to('#empresa-purple', { width: '120px', x: 0, y: 0, duration: 0.5 });
+    gsap.to('#empresa-logo-red', { width: '120px', x: 0, y: 0, duration: 0.5 });
+    gsap.to('#empresa-logo-blue', { width: '120px', x: 0, y: 0, duration: 0.5 });
+    gsap.to('#empresa-logo-ux', { width: '120px', x: 0, y: 0, duration: 0.5 });
+    gsap.to('#empresa-logo-byo', { width: '120px', x: 0, y: 0, duration: 0.5 });
+
+    // Quitar cualquier transformación aplicada a los logos (si es necesario)
+    gsap.to('.logo', { clearProps: 'transform', duration: 0.2 });
 }
 
 // Evento click para las columnas
@@ -486,17 +520,28 @@ columns.forEach((column, index) => {
 
         // Ejecutar la animación de text-div, pattern-lat y empresa-logo
         animateTextAndPattern();
-
-        // Mostrar "Purple Ideas" con animación
-        gsap.fromTo(purpleIdeasText, 
-            { opacity: 0 },  // Estado inicial (oculto)
-            { 
-                opacity: 1,    // Estado final (visible)
-                duration: 0.2,   // Duración de la animación
-                display: 'block'  // Cambiamos a visible
-            }
-        );
-        
+        // Solo mostrar "Purple Ideas" si la columna actual es la morada
+        if (column.querySelector('#empresa-purple')) {
+            gsap.to(purpleIdeasText, {
+                display: 'block',
+                opacity: 1,
+                duration: 0.5,
+                ease: 'power2.out',
+            });
+        }
     });
 });
-overlay.addEventListener('click', restoreColumns);
+
+overlay.addEventListener('click', () => {
+    restoreColumns();
+    
+    // Ocultar "Purple Ideas" cuando el overlay es clicado
+    gsap.to(purpleIdeasText, {
+        opacity: 0,
+        duration: 0.3,
+        ease: 'power2.in',
+        onComplete: () => {
+            purpleIdeasText.style.display = 'none';
+        }
+    });
+});

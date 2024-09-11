@@ -503,11 +503,11 @@ footer p {
   
   /* Cuando se expande la columna, el logo se ajusta */
   .custom-column.expanded #empresa-purple {
-    width: 111px;
-    height: 111px;
-    position: relative; 
-    top: 28%;
-    left: 23%;
+    width: 111px !important;
+    height: 111px !important;
+    position: relative !important;
+    top: 28% !important;
+    left: 23% !important;
   }
   
 
@@ -521,11 +521,11 @@ footer p {
 }
 
 .custom-column.expanded #empresa-logo-red {
-    top: 30%;
-    left: 10%;
-    width: 297px;
-    height: 96px;
-    position: absolute;
+    top: 30% !important;
+    left: 10% !important;
+    width: 297px !important;
+    height: 96px !important;
+    position: absolute !important;
 }
 
 #empresa-logo-blue{
@@ -538,11 +538,11 @@ footer p {
 }
 
 .custom-column.expanded #empresa-logo-blue {
-    top: 30%;
-    left: 10%;
-    width: 334px;
-    height: 88px;
-    position: absolute;
+    top: 30% !important;
+    left: 10% !important;
+    width: 334px !important;
+    height: 88px !important;
+    position: absolute !important;
 }
 
 /* Estado inicial (original) del logo UX */
@@ -561,11 +561,11 @@ footer p {
 
 /* Estado expandido del logo UX */
 .custom-column.expanded #empresa-logo-ux {
-    top: 23%;
-    left: 12%;
-    width: 182px;
-    height: 200px;
-    position: absolute;
+    top: 23% !important;
+    left: 12% !important;
+    width: 182px !important;
+    height: 200px !important;
+    position: absolute !important;
 }
 
 
@@ -581,12 +581,13 @@ footer p {
 
 
 .custom-column.expanded #empresa-logo-byo {
-    top: 23%;
-    left: 12%;
-    width: 210px;
-    height: 210px;
-    position: absolute;
+    top: 23% !important;
+    left: 12% !important;
+    width: 210px !important;
+    height: 210px !important;
+    position: absolute !important;
 }
+
 
 
 .custom-column.original{
@@ -627,11 +628,11 @@ footer p {
 
 
 .custom-column.expanded #empresa-logo {
-    top: 20%;
-    left: 20%;
-    width: 234px;
-    height: 234px;
-    position: absolute;
+    top: 20% !important; 
+    left: 20% !important;
+    width: 234px !important;
+    height: 234px !important;
+    position: absolute !important;
 }
 
 .custom-column.expanded #pattern-lat {
@@ -812,14 +813,13 @@ footer p {
     position: absolute;
 }
 
-
 .custom-column.expanded #pattern-purple {
-    display: block; /* Muestra el patrón */
-    opacity: 1; /* Aparece el patrón */
+    display: block;
+    opacity: 1; 
     width: 600px;
     height: 135%;
-    position: absolute; /* Cambiar a 'absolute' para permitir el uso de left */
-    right: -11%; /* Ahora left funcionará */
+    position: absolute; 
+    right: -11%; 
     opacity: 0.68;
     bottom: -10%;
 }
@@ -874,6 +874,11 @@ footer p {
     bottom: -10%;
 }
 
+/* #pattern-lat, #pattern-purple, #pattern-share, #pattern-red, #pattern-blue, #pattern-ux, #pattern-byo {
+    opacity: 0;
+    top: -100%;
+    left: 60%;
+} */
 
 
 .text-dark-blue {
