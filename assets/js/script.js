@@ -455,16 +455,63 @@ function restoreColumns() {
     });
 
     // Restaurar los tamaños y posiciones originales de los logos
-    gsap.to('#empresa-logo', { width: '120px', x: 0, y: 0, duration: 0.5, delay: 0.2 });
-    gsap.to('#empresa-purple', { width: '120px', x: 0, y: 0, duration: 0.5 });
-    gsap.to('#empresa-logo-red', { width: '120px', x: 0, y: 0, duration: 0.5 });
-    gsap.to('#empresa-logo-blue', { width: '120px', x: 0, y: 0, duration: 0.5 });
-    gsap.to('#empresa-logo-ux', { width: '120px', x: 0, y: 0, duration: 0.5 });
-    gsap.to('#empresa-logo-byo', { width: '120px', x: 0, y: 0, duration: 0.5 });
+    gsap.to('#empresa-logo', { 
+        width: '120px', 
+        x: 0, 
+        y: 0, 
+        duration: 0.4,  // Aumenta la duración para un efecto más lento
+        ease: "power3.out",  // Función de easing suave
+        delay: 0.2 
+    });
+    
+    gsap.to('#empresa-purple', { 
+        width: '100px', 
+        x: 0, 
+        y: 0, 
+        duration: 0.4, 
+        ease: "power3.out"
+    });
+    
+    gsap.to('#empresa-logo-red', { 
+        width: '130px', 
+        x: 0, 
+        y: 0, 
+        duration: 0.4, 
+        ease: "power3.out"
+    });
+    
+    gsap.to('#empresa-logo-blue', { 
+        width: '150px', 
+        x: 0, 
+        y: 0, 
+        duration: 0.4, 
+        ease: "power3.out"
+    });
+    
+    gsap.to('#empresa-logo-ux', { 
+        width: '100px', 
+        x: 0, 
+        y: 0, 
+        duration: 0.4, 
+        ease: "power3.out"
+    });
+    
+    gsap.to('#empresa-logo-byo', { 
+        width: '100px', 
+        x: 0, 
+        y: 0, 
+        duration: 0.4, 
+        ease: "power3.out"
+    });
 
     // Quitar cualquier transformación aplicada a los logos (si es necesario)
-    gsap.to('.logo', { clearProps: 'transform', duration: 0.2 });
+    gsap.to('.logo', { 
+        clearProps: 'transform', 
+        duration: 0.4,  // Tiempo más prolongado para un ajuste suave
+        ease: "power3.out" 
+    });
 }
+
 
 // Evento click para las columnas
 columns.forEach((column, index) => {

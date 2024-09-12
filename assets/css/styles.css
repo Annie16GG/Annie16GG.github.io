@@ -466,7 +466,7 @@ footer p {
 #empresa-logo {
     max-width: 80%;
     max-height: 80%;
-    width: auto;
+    width: 120px;
     height: auto;
     transition: transform 0.5s ease, clip-path 0.5s ease, object-fit 0.5s ease;
     clip-path: inset(0%);
@@ -475,12 +475,50 @@ footer p {
 #empresa-purple {
     max-width: 80%;
     max-height: 80%;
-    width: auto;
+    width: 100px;
     height: auto;
     transition: transform 0.5s ease, clip-path 0.5s ease, object-fit 0.5s ease;
     clip-path: inset(0%);
   }
 
+  #empresa-logo-red{
+    max-width: 80%;
+    max-height: 80%;
+    width: 130px;
+    height: auto;
+    transition: transform 0.5s ease, clip-path 0.5s ease, object-fit 0.5s ease;
+    clip-path: inset(0%);
+}
+
+#empresa-logo-blue{
+    max-width: 80%;
+    max-height: 80%;
+    width: auto;
+    height: auto;
+    transition: transform 0.5s ease, clip-path 0.5s ease, object-fit 0.5s ease;
+    clip-path: inset(0%);
+}
+
+#empresa-logo-ux {
+    max-width: 80%;
+    max-height: 80%;
+    width: 100px;
+    height: auto;
+    position: relative;
+    top: auto;
+    left: auto;
+    transition: all 0.5s ease;
+    clip-path: inset(0%);
+}
+
+#empresa-logo-byo{
+    max-width: 80%;
+    max-height: 80%;
+    width: 100px;
+    height: auto;
+    transition: transform 0.5s ease, clip-path 0.5s ease, object-fit 0.5s ease;
+    clip-path: inset(0%);
+}
 /* Contenedor que agrupa el logo y el texto */
 .logo-and-text-container {
     /* flex-direction: column; */
@@ -511,14 +549,7 @@ footer p {
   }
   
 
-#empresa-logo-red{
-    max-width: 80%;
-    max-height: 80%;
-    width: auto;
-    height: auto;
-    transition: transform 0.5s ease, clip-path 0.5s ease, object-fit 0.5s ease;
-    clip-path: inset(0%);
-}
+
 
 .custom-column.expanded #empresa-logo-red {
     top: 30% !important;
@@ -528,14 +559,7 @@ footer p {
     position: absolute !important;
 }
 
-#empresa-logo-blue{
-    max-width: 80%;
-    max-height: 80%;
-    width: auto;
-    height: auto;
-    transition: transform 0.5s ease, clip-path 0.5s ease, object-fit 0.5s ease;
-    clip-path: inset(0%);
-}
+
 
 .custom-column.expanded #empresa-logo-blue {
     top: 30% !important;
@@ -547,17 +571,7 @@ footer p {
 
 /* Estado inicial (original) del logo UX */
 /* Estado original del logo UX */
-#empresa-logo-ux.original {
-    max-width: 80%;
-    max-height: 80%;
-    width: auto;
-    height: auto;
-    position: relative;
-    top: auto;
-    left: auto;
-    transition: all 0.5s ease;
-    clip-path: inset(0%);
-}
+
 
 /* Estado expandido del logo UX */
 .custom-column.expanded #empresa-logo-ux {
@@ -566,17 +580,6 @@ footer p {
     width: 182px !important;
     height: 200px !important;
     position: absolute !important;
-}
-
-
-
-#empresa-logo-byo{
-    max-width: 80%;
-    max-height: 80%;
-    width: auto;
-    height: auto;
-    transition: transform 0.5s ease, clip-path 0.5s ease, object-fit 0.5s ease;
-    clip-path: inset(0%);
 }
 
 
@@ -596,8 +599,6 @@ footer p {
     position: relative;
     height: 696.8px;
     width: 185px;
-    padding-left: 1.7%;
-    padding-right: 1.7%;
     transition: all 1s ease;
     cursor: pointer;
     overflow: hidden;
