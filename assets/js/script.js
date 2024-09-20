@@ -164,6 +164,7 @@ const purpleIdeasText = document.getElementById('purple-ideas');
 const overlay = document.getElementById('overlay');
 // Función para animar la aparición de los divs
 function animateTextAndPattern() {
+    debugger;
     // Animar el text-div desde la derecha
     gsap.fromTo("#text-div", 
         { 
@@ -248,12 +249,12 @@ function animateTextAndPattern() {
     gsap.fromTo("#pattern-purple",  
         { 
             opacity: 0, 
-            top: "-100%"  // Inicia fuera de la pantalla
+            y: "-100%"  // Inicia fuera de la pantalla
         }, 
         { 
             duration: 0.3,  
-            top: "-22%",  // Ajusta esta posición según sea necesario
-            opacity: 1,  // Aparece gradualmente
+            y: "0%",  // Ajusta esta posición según sea necesario
+            opacity:  0.68,  // Aparece gradualmente
             ease: "power2.out"
         }
     );
@@ -268,7 +269,7 @@ function animateTextAndPattern() {
             duration: 0.3,  
             y: "0%",      // Se coloca en su posición final en el eje Y
             x: "0%",
-            opacity: 1,   // Aparece gradualmente
+            opacity:  0.68,   // Aparece gradualmente
             ease: "power2.out",
         }
     );
@@ -276,7 +277,7 @@ function animateTextAndPattern() {
     gsap.fromTo(patternRed,  
         { 
             opacity: 0, 
-            y: "-100%",  // Inicia fuera de la pantalla, solo en el eje Y (arriba)
+            y: "-200%",  // Inicia fuera de la pantalla, solo en el eje Y (arriba)
             x: "0%",     // Mantiene la posición horizontal sin moverse en el eje X
         }, 
         { 
@@ -290,11 +291,11 @@ function animateTextAndPattern() {
     gsap.fromTo(patternBlue,  
         { 
             opacity: 0, 
-            y: "-100%",  // Inicia fuera de la pantalla, solo en el eje Y (arriba)
+            y: "-200%",  // Inicia fuera de la pantalla, solo en el eje Y (arriba)
             x: "0%",     // Mantiene la posición horizontal sin moverse en el eje X
         }, 
         { 
-            duration: 0.3,  
+            duration: 1,  
             y: "0%",      // Se coloca en su posición final en el eje Y
             opacity: 1,   // Aparece gradualmente
             ease: "power2.out",
@@ -304,11 +305,11 @@ function animateTextAndPattern() {
     gsap.fromTo(patternUx,  
         { 
             opacity: 0, 
-            y: "-100%",  // Inicia fuera de la pantalla, solo en el eje Y (arriba)
+            y: "-200%",  // Inicia fuera de la pantalla, solo en el eje Y (arriba)
             x: "0%",     // Mantiene la posición horizontal sin moverse en el eje X
         }, 
         { 
-            duration: 0.3,  
+            duration: 1,  
             y: "0%",      // Se coloca en su posición final en el eje Y
             opacity: 0.13,   // Aparece gradualmente
             ease: "power2.out",
@@ -318,11 +319,11 @@ function animateTextAndPattern() {
     gsap.fromTo(patternByo,  
         { 
             opacity: 0, 
-            y: "-100%",  // Inicia fuera de la pantalla, solo en el eje Y (arriba)
+            y: "-200%",  // Inicia fuera de la pantalla, solo en el eje Y (arriba)
             x: "0%",     // Mantiene la posición horizontal sin moverse en el eje X
         }, 
         { 
-            duration: 0.3,  
+            duration: 1,  
             y: "0%",      // Se coloca en su posición final en el eje Y
             opacity: 1,   // Aparece gradualmente
             ease: "power2.out",
@@ -372,7 +373,7 @@ function reverseAnimations() {
     // Animar patterns para que desaparezcan hacia arriba
     gsap.to("#pattern-lat", {
         opacity: 0,
-        top: "-80%",  // Se mueve hacia arriba
+        top: "-100%",  // Se mueve hacia arriba
         duration: 0.2,
         ease: "power2.in",
     });
@@ -391,16 +392,7 @@ function reverseAnimations() {
         ease: "power2.in",
         delay: 0.5
     });
-
-    // Animar la frase "Purple Ideas" para que desaparezca hacia abajo
-    gsap.to("#purple-ideas", {
-        opacity: 0,
-        duration: 0.5,
-        ease: "power2.in",
-        onComplete: function() {
-            document.getElementById("purple-ideas").style.display = "none";
-        }
-    });    
+   
 }
 
 const initialStyles = {
@@ -481,7 +473,7 @@ function restoreColumns() {
     });
     
     gsap.to('#empresa-logo-blue', { 
-        width: '150px', 
+        width: '170px', 
         x: 0, 
         y: 0, 
         duration: 0.4, 
@@ -572,8 +564,6 @@ columns.forEach((column, index) => {
             gsap.to(purpleIdeasText, {
                 display: 'block',
                 opacity: 1,
-                duration: 0.5,
-                ease: 'power2.out',
             });
         }
     });
@@ -585,8 +575,6 @@ overlay.addEventListener('click', () => {
     // Ocultar "Purple Ideas" cuando el overlay es clicado
     gsap.to(purpleIdeasText, {
         opacity: 0,
-        duration: 0.3,
-        ease: 'power2.in',
         onComplete: () => {
             purpleIdeasText.style.display = 'none';
         }
