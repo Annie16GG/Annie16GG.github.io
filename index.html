@@ -12,6 +12,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+
+
+
+    <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <!-- Incluir GSAP -->
@@ -23,28 +30,34 @@
 
 <body>
     <!-- Header con logo y menú de navegación -->
-    <header class="container-fluid align-items-center">
+    <header class="container-fluid">
         <div class="row align-items-center">
-            <div id="cont-logo" class="col-6 col-md-2">
-                <img id="logo" src="assets/images/logo_azul_horizontal.png" alt="Grupo LATBC Logo">
+            <div id="cont-logo" class="col-5 col-md-2 col-lg-2">
+                <img id="logo" class="img-fluid" src="assets/images/logo_azul_horizontal.png" alt="Grupo LATBC Logo">
             </div>
-            <div id="menu" class="col-6 col-md-6">
-                <nav>
-                    <ul class="nav justify-content-center">
-                        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Soluciones</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Documentos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Recursos</a></li>
+
+            <div class="col-3 col-md-1 col-lg-1">
+            </div>
+            <!-- Menú responsive -->
+            <nav class="navbar navbar-expand-md col-1 col-md-6 col-lg-6">
+                <!-- Botón de menú hamburguesa para dispositivos móviles -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu"
+                    aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Enlaces del menú -->
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul ul class="navbar-nav justify-content-between">
+                        <li class="nav-item"><a class="nav-link" href="#"></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"></a></li>
+                        <li id="contacto" class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
                     </ul>
-                </nav>
-            </div>
-            <div class="col-md-2 text-right d-none d-md-block">
-                <nav>
-                    <ul class="nav justify-content-end">
-                        <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
-                    </ul>
-                </nav>
-            </div>
+                </div>
+            </nav>
+
         </div>
     </header>
 
@@ -52,9 +65,9 @@
     <section class="main-section text-left py-2">
         <div class="container">
             <div class="row">
-                <h1 id="texto-1" class="">Sien lorem</h1>
+                <h1 id="texto-1" class="">Comprometidos</h1>
 
-                <h1 id="texto-2" class="">Lorem Ipsum.</h1>
+                <h1 id="texto-2" class="">con los datos.</h1>
                 <div class="color-palette mt-4">
                     <div class="color-box color1 mx-2"></div>
                     <div class="color-box color2 mx-2"></div>
@@ -75,11 +88,15 @@
 
             <div id="mensaje" class="row">
                 <div id="mensaje1" class="col-md-2">
-                    <p>LOREM IPSUM DOLOR SIT AMET</p>
+                    <p>ENTREGAMOS TECNOLOGÍA SIN FRONTERAS</p>
                 </div>
-                <div id="mensaje2" class="col-md-4 text-left">
-                    <p>Lorem ipsum dolor sit amet, consectetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                        ut labore et dolore magna aliquyam era.</p>
+                <div id="mensaje2" class="col-10 col-md-8 text-left">
+                    <p>Nos apasionan los datos y el poder que tienen para transformar a las empresas.
+                        Desde el 2003 emprendimos una historia de retos en el mundo de la tecnología, contribuyendo en
+                        los proyectos de transformación más importantes de las grandes empresas mexicanas y del mundo.
+                        Esos retos nos llevaron a la especialización; a crear empresas enfocadas a resolver los desafíos
+                        más importantes del futuro.
+                    </p>
                 </div>
             </div>
         </div>
@@ -94,125 +111,135 @@
                     <div id="text-div" class="original hidden mt-4">
                         <div class="text-box color5 mx-2">
                             <h1
-                                style="font-size: 46px; padding-top: 8px; color: #0D0D0D; line-height: 1.2; font-weight: 400;">
+                                style="font-size: 2rem; padding-top: 8px; color: #0D0D0D; line-height: 1.2; font-weight: 400;">
                                 Acerca de Latbc <br></h1>
-                            <p id="parrafo-lat" style="line-height: 1.3; justify-content: center;">Una empresa de consultoría tecnológica de primer nivel. Fundada en 2003 en la Ciudad de México, hemos entregado a lo largo de 21 años más de 250 proyectos exitosos en Estados Unidos y Centro y Sudamérica, con miles de increíbles colaboradores.</p>
+                            <p id="parrafo-lat" style="line-height: 1.3; justify-content: center;">Una empresa de
+                                consultoría tecnológica de primer nivel. Fundada en 2003 en la Ciudad de México, hemos
+                                entregado a lo largo de 21 años más de 250 proyectos exitosos en Estados Unidos y Centro
+                                y Sudamérica, con miles de increíbles colaboradores.</p>
 
                             <!-- Comillas e imagen alineadas al texto -->
                             <div style="display: flex; align-items: center;">
                                 <img src="assets/images/Captura.PNG" alt="Imagen pequeña"
                                     style="width:45px; height: 25px; margin-bottom: 15px;">
                                 <p
-                                    style="margin-left: 15px; font-size: 20px; font-weight:300; color: #0D0D0D; line-height: 1.3;">
-                                    Nuestro compromiso en Latbc es enriquecer el poder de los datos. Facilitar a nuestros clientes los puentes que conecten el presente con el futuro, asegurando la competitividad e innovación a través de la tecnología».</p>
+                                    style="margin-left: 15px; font-size: 1.2rem; font-weight:300; color: #0D0D0D; line-height: 1.3;">
+                                    Nuestro compromiso en Latbc es enriquecer el poder de los datos. Facilitar a
+                                    nuestros clientes los puentes que conecten el presente con el futuro, asegurando la
+                                    competitividad e innovación a través de la tecnología”. </p>
                             </div>
 
-                            <!-- Centrado del círculo y nombre -->
-                            <div style="display: flex; margin-left: 10%; align-items: center; margin-top: 10px;">
+                            <a href="https://latbcconsulting.com/" class="link-overlay" target="_blank">www.latbc.com</a>
+                            <!-- <div style="display: flex; margin-left: 10%; align-items: center; margin-top: 10px;">
                                 <div
                                     style="width: 40px; height: 40px; border-radius: 50%; background-color: #e0e0e0d1; margin-right: 15px;">
-                                    <!-- Aquí se podrá agregar una imagen más tarde -->
                                 </div>
                                 <p style="font-size: 18px; color:#383838; margin: 0; line-height: 1.2;">Xavier Espinosa
                                     de los Monteros A.</p>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
-
                 <div class="custom-column original bg-purple">
-                        <img id="empresa-purple" src="assets/images/purple-logo.svg" alt="X Logo" class="img-fluid">
-                        <p id="purple-ideas" class="poppins-medium" style="font-size: 49px; color: white; margin-top: 30%; display: none;">Purple ideas</p>
+                    <img id="empresa-purple" src="assets/images/purple-logo.svg" alt="X Logo" class="img-fluid">
+                    <p id="purple-ideas" class="poppins-medium"
+                        style="font-size: 49px; color: white; margin-top: 30%; display: none;">Purple ideas</p>
 
                     <img id="pattern-purple" class="hidden" src="assets/images/purple-pattern.svg" alt="">
                     <div id="text-div" class="original hidden mt-4">
                         <div class="text-box-purple color5 mx-2">
                             <h1
-                                style="font-size: 46px; padding-top: 8px; padding-right:60px; color: #0D0D0D; line-height: 1.2; font-weight: 400;">
-                                Lorem ipsum dolor sit<br></h1>
-                            <p id="parrafo" style="line-height: 1.3;">Lorem ipsum dolor sit amet, consetetur sadipscing
-                                elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-                                sed diam voluptua vero eos.
-                                </p>
+                                style="font-size: 2rem; padding-top: 8px; padding-right:60px; color: #0D0D0D; line-height: 1.2; font-weight: 400;">
+                                Data Intelligent Marketing Platform<br></h1>
+                            <p id="parrafo" style="line-height: 1.3;">La suma de nuestros conocimientos en marketing de
+                                nueva generación, la inteligencia del dato y la tecnología. Además de procesar millones
+                                de datos en segundos, puede mostrar una consulta de datos de forma sencilla, facilitando
+                                las acciones clave y las comparativas de mercado.
+                            </p>
 
                             <div style="display: flex; align-items: center;">
                                 <img src="assets/images/Captura.PNG" alt="Imagen pequeña"
                                     style="width:45px; height: 25px; margin-bottom: 15px;">
                                 <p
-                                    style="margin-left: 15px; font-size: 20px; font-weight:300; color: #0D0D0D; line-height: 1.3;">
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+                                    style="margin-left: 15px; font-size: 1.2rem; font-weight:300; color: #0D0D0D; line-height: 1.3;">
+                                    Una plataforma disruptiva, SaaS, de bajo costo, sin barreras de especialización ni
+                                    tecnológicas”.</p>
                             </div>
-                            <!-- Centrado del círculo y nombre -->
-                            <div style="display: flex; margin-left: 10%; align-items: center; margin-top: 10px;">
+                            <a href="https://www.purpleideas.com.mx/" class="link-overlay" target="_blank">www.purpleideas.com.mx</a>
+                            <!-- <div style="display: flex; margin-left: 10%; align-items: center; margin-top: 10px;">
                                 <div
                                     style="width: 40px; height: 40px; border-radius: 50%; background-color: #e0e0e0d1; margin-right: 15px;">
-                                    <!-- Aquí se podrá agregar una imagen más tarde -->
                                 </div>
                                 <p style="font-size: 18px; color:#383838; margin: 0; line-height: 1.2;">Lorem ipsum</p>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
 
                 <div class="custom-column original bg-blue">
                     <img id="empresa-logo" src="assets/images/share-logo.svg" alt="S Logo" class="img-fluid">
-                    <img id="pattern-share" style="scale:2;" class="hidden" src="assets/images/share-pattern.svg" alt="">
-                        <div id="text-div" class="original hidden mt-4">
-                            <div class="text-box-purple color5 mx-2">
-                                <h1
-                                    style="font-size: 46px; padding-top: 8px; padding-right:60px; color: #0D0D0D; line-height: 1.2; font-weight: 400;">
-                                    Lorem ipsum dolor sit<br></h1>
-                                <p id="parrafo" style="line-height: 1.3;">Lorem ipsum dolor sit amet, consetetur sadipscing
-                                    elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-                                    sed diam voluptua vero eos.</p>
-
-                                <div style="display: flex; align-items: center;">
-                                    <img src="assets/images/Captura.PNG" alt="Imagen pequeña"
-                                        style="width:45px; height: 25px; margin-bottom: 15px;">
-                                    <p
-                                        style="margin-left: 15px; font-size: 20px; font-weight:300; color: #0D0D0D; line-height: 1.3;">
-                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
-                                </div>
-                                <!-- Centrado del círculo y nombre -->
-                                <div style="display: flex; margin-left: 10%; align-items: center; margin-top: 10px;">
-                                    <div
-                                        style="width: 40px; height: 40px; border-radius: 50%; background-color: #e0e0e0d1; margin-right: 15px;">
-                                        <!-- Aquí se podrá agregar una imagen más tarde -->
-                                    </div>
-                                    <p style="font-size: 18px; color:#383838; margin: 0; line-height: 1.2;">Lorem ipsum
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-
-                <div class="custom-column original bg-red">
-                    <img id="empresa-logo-red" src="assets/images/red_logo_curvas_2_blanco.svg" alt="S Logo" class="img-fluid">
-                    <img id="pattern-red" class="hidden" src="assets/images/red-pattern.svg" alt="">
-                    <div id="text-div-red" class="original hidden mt-4">
+                    <img id="pattern-share" style="scale:2;" class="hidden" src="assets/images/share-pattern.svg"
+                        alt="">
+                    <div id="text-div" class="original hidden mt-4">
                         <div class="text-box-purple color5 mx-2">
                             <h1
-                                style="font-size: 46px; padding-top: 8px; padding-right:60px; color: #0D0D0D; line-height: 1.2; font-weight: 400;">
-                                Lorem ipsum dolor sit<br></h1>
-                            <p id="parrafo" style="line-height: 1.3;">Lorem ipsum dolor sit amet, consetetur sadipscing
-                                elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-                                sed diam voluptua vero eos.</p>
+                                style="font-size: 2rem; padding-top: 8px; padding-right:60px; color: #0D0D0D; line-height: 1.2; font-weight: 400;">
+                                La solución de Inteligencia de Negocio<br></h1>
+                            <p id="parrafo" style="line-height: 1.3; margin-top: 30px;">Facilita la toma de decisiones
+                                estratégicas. La plataforma SAAS de Share Analytics transforma los datos crudos en
+                                información útil precisa y relevante; que permite a los usuarios explorar datos en
+                                tiempo real de manera simple, interactiva, organizada e inmediata.</p>
 
                             <div style="display: flex; align-items: center;">
                                 <img src="assets/images/Captura.PNG" alt="Imagen pequeña"
                                     style="width:45px; height: 25px; margin-bottom: 15px;">
                                 <p
-                                    style="margin-left: 15px; font-size: 20px; font-weight:300; color: #0D0D0D; line-height: 1.3;">
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+                                    style="margin-left: 15px; font-size: 1.2rem; font-weight:300; color: #0D0D0D; line-height: 1.3;">
+                                    Aprovechar la riqueza de la información y compartirla puede hacer la diferencia en
+                                    un entorno cambiante y competido”. </p>
                             </div>
-                            <!-- Centrado del círculo y nombre -->
-                            <div style="display: flex; margin-left: 10%; align-items: center; margin-top: 10px;">
+                            <a href="https://shareanalytics.com.mx/" class="link-overlay" target="_blank">www.shareanalytics.com.mx</a>
+                            <!-- <div style="display: flex; margin-left: 10%; align-items: center; margin-top: 10px;">
+                                    <div
+                                        style="width: 40px; height: 40px; border-radius: 50%; background-color: #e0e0e0d1; margin-right: 15px;">
+                                    </div>
+                                    <p style="font-size: 18px; color:#383838; margin: 0; line-height: 1.2;">Lorem ipsum
+                                    </p>
+                                </div> -->
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="custom-column original bg-red">
+                    <img id="empresa-logo-red" src="assets/images/red_logo_curvas_2_blanco.svg" alt="S Logo"
+                        class="img-fluid">
+                    <img id="pattern-red" class="hidden" src="assets/images/red-pattern.svg" alt="">
+                    <div id="text-div-red" class="original hidden mt-4">
+                        <div class="text-box-purple color5 mx-2">
+                            <h1
+                                style="font-size: 2rem; padding-top: 8px; padding-right:60px; color: #0D0D0D; line-height: 1.2; font-weight: 400;">
+                                Latbc + Oracle<br></h1>
+                            <p id="parrafo" style="line-height: 1.3;">Durante 22 años hemos implementado, configurado,
+                                mantenido y evolucionado cientos de operaciones ORACLE. Con un equipo de más de 200
+                                ingenieros altamente especializados hemos logrado ser parte de los proyectos más
+                                innovadores y exitosos del mundo ORACLE.</p>
+
+                            <div style="display: flex; align-items: center;">
+                                <img src="assets/images/Captura.PNG" alt="Imagen pequeña"
+                                    style="width:45px; height: 25px; margin-bottom: 15px;">
+                                <p
+                                    style="margin-left: 15px; font-size: 1.2rem; font-weight:300; color: #0D0D0D; line-height: 1.3;">
+                                    Red by Latbc es una estructura 100% enfocada y dedicada en la plataforma de ORACLE,
+                                    para contribuir a la ola de innovación basada en OCI”.</p>
+                            </div>
+                            <a href="https://shareanalytics.com.mx/" class="link-overlay" target="_blank">www.shareanalytics.com.mx</a>
+                            <!-- <div style="display: flex; margin-left: 10%; align-items: center; margin-top: 10px;">
                                 <div
                                     style="width: 40px; height: 40px; border-radius: 50%; background-color: #e0e0e0d1; margin-right: 15px;">
-                                    <!-- Aquí se podrá agregar una imagen más tarde -->
                                 </div>
                                 <p style="font-size: 18px; color:#383838; margin: 0; line-height: 1.2;">Lorem ipsum</p>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -223,58 +250,64 @@
                     <div id="text-div-blue" class="original hidden mt-4">
                         <div class="text-box-purple color5 mx-2">
                             <h1
-                                style="font-size: 46px; padding-top: 8px; padding-right:60px; color: #0D0D0D; line-height: 1.2; font-weight: 400;">
-                                Lorem ipsum dolor sit<br></h1>
-                            <p id="parrafo" style="line-height: 1.3;">Lorem ipsum dolor sit amet, consetetur sadipscing
-                                elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-                                sed diam voluptua vero eos.</p>
+                                style="font-size: 1.8rem; padding-top: 8px; padding-right:60px; color: #0D0D0D; line-height: 1.2; font-weight: 400;">
+                                El engrane entre la tecnología y el talento.<br></h1>
+                            <p id="parrafo" style="line-height: 1.3;">Hemos presenciado durante más de 20 años la
+                                evolución de la tecnología, procesos, metodologías y los cambios generacionales. Durante
+                                este camino nuestro factor humano ha hecho la diferencia acompañando a los clientes al
+                                éxito.</p>
 
                             <div style="display: flex; align-items: center;">
                                 <img src="assets/images/Captura.PNG" alt="Imagen pequeña"
                                     style="width:45px; height: 25px; margin-bottom: 15px;">
                                 <p
-                                    style="margin-left: 15px; font-size: 20px; font-weight:300; color: #0D0D0D; line-height: 1.3;">
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+                                    style="margin-left: 15px; font-size: 1.1rem; font-weight:300; color: #0D0D0D; line-height: 1.3;">
+                                    Blue Cell, Blue Cluster y Blue People son los tres modelos de servicio enfocados a
+                                    agilizar proyectos tecnológicos donde la especialización, las metodologías, las
+                                    herramientas de gestión y los equipos altamente capacitados son la clave para
+                                    eficientizar los procesos".</p>
                             </div>
-                            <!-- Centrado del círculo y nombre -->
-                            <div style="display: flex; margin-left: 10%; align-items: center; margin-top: 10px;">
+                            <a href="https://shareanalytics.com.mx/" class="link-overlay" target="_blank">www.shareanalytics.com.mx</a>
+                            <!-- <div style="display: flex; margin-left: 10%; align-items: center; margin-top: 10px;">
                                 <div
                                     style="width: 40px; height: 40px; border-radius: 50%; background-color: #e0e0e0d1; margin-right: 15px;">
-                                    <!-- Aquí se podrá agregar una imagen más tarde -->
                                 </div>
                                 <p style="font-size: 18px; color:#383838; margin: 0; line-height: 1.2;">Lorem ipsum</p>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
 
                 <div class="custom-column original bg-orange">
-                    <img id="empresa-logo-ux" src="assets/images/ux-logo.svg" alt="UX Spaces Logo" class="img-fluid original">
+                    <img id="empresa-logo-ux" src="assets/images/ux-logo.svg" alt="UX Spaces Logo"
+                        class="img-fluid original">
                     <img id="pattern-ux" class="hidden" src="assets/images/ux-pattern.svg" alt="">
                     <div id="text-div-ux" class="original hidden mt-4">
                         <div class="text-box-purple color5 mx-2">
                             <h1
-                                style="font-size: 46px; padding-top: 8px; padding-right:60px; color: #0D0D0D; line-height: 1.2; font-weight: 400;">
-                                Lorem ipsum dolor sit<br></h1>
-                            <p id="parrafo" style="line-height: 1.3;">Lorem ipsum dolor sit amet, consetetur sadipscing
-                                elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-                                sed diam voluptua vero eos.</p>
+                                style="font-size: 2rem; padding-top: 8px; padding-right:60px; color: #0D0D0D; line-height: 1.2; font-weight: 400;">
+                                Desing, people & places in harmony.<br></h1>
+                            <p id="parrafo" style="line-height: 1.3;">En UxSpaces cerramos la brecha entre tecnología y
+                                arquitectura, fusionando disciplinas para transformar entornos laborales. Con más de 20
+                                años de experiencia, integramos diseño y tecnología para potenciar la productividad y el
+                                bienestar, abordando elementos que muchas empresas aún tratan de forma aislada.</p>
 
                             <div style="display: flex; align-items: center;">
                                 <img src="assets/images/Captura.PNG" alt="Imagen pequeña"
                                     style="width:45px; height: 25px; margin-bottom: 15px;">
                                 <p
-                                    style="margin-left: 15px; font-size: 20px; font-weight:300; color: #0D0D0D; line-height: 1.3;">
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+                                    style="margin-left: 15px; font-size: 1.2rem; font-weight:300; color: #0D0D0D; line-height: 1.3;">
+                                    Imaginamos entornos que trascienden las fronteras convencionales del diseño, para
+                                    crear espacios de trabajo que inspiran y motivan a las personas”</p>
                             </div>
-                            <!-- Centrado del círculo y nombre -->
-                            <div style="display: flex; margin-left: 10%; align-items: center; margin-top: 10px;">
+                            <!-- <div style="display: flex; margin-left: 10%; align-items: center; margin-top: 10px;">
                                 <div
                                     style="width: 40px; height: 40px; border-radius: 50%; background-color: #e0e0e0d1; margin-right: 15px;">
-                                    <!-- Aquí se podrá agregar una imagen más tarde -->
                                 </div>
                                 <p style="font-size: 18px; color:#383838; margin: 0; line-height: 1.2;">Lorem ipsum</p>
-                            </div>
+                            </div> -->
+                            <a href="https://www.uxspaces.com.mx/" class="link-overlay" target="_blank">www.uxspaces.com.mx</a>
+
                         </div>
                     </div>
                 </div>
@@ -285,7 +318,7 @@
                     <div id="text-div-byo" class="original hidden mt-4">
                         <div class="text-box-purple color5 mx-2">
                             <h1
-                                style="font-size: 46px; padding-top: 8px; padding-right:60px; color: #0D0D0D; line-height: 1.2; font-weight: 400;">
+                                style="font-size: 2rem; padding-top: 8px; padding-right:60px; color: #0D0D0D; line-height: 1.2; font-weight: 400;">
                                 Lorem ipsum dolor sit<br></h1>
                             <p id="parrafo" style="line-height: 1.3;">Lorem ipsum dolor sit amet, consetetur sadipscing
                                 elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
@@ -295,17 +328,16 @@
                                 <img src="assets/images/Captura.PNG" alt="Imagen pequeña"
                                     style="width:45px; height: 25px; margin-bottom: 15px;">
                                 <p
-                                    style="margin-left: 15px; font-size: 20px; font-weight:300; color: #0D0D0D; line-height: 1.3;">
+                                    style="margin-left: 15px; font-size: 1.2rem; font-weight:300; color: #0D0D0D; line-height: 1.3;">
                                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
                             </div>
-                            <!-- Centrado del círculo y nombre -->
-                            <div style="display: flex; margin-left: 10%; align-items: center; margin-top: 10px;">
+                            <a href="https://shareanalytics.com.mx/" class="link-overlay" target="_blank">www.shareanalytics.com.mx</a>
+                            <!-- <div style="display: flex; margin-left: 10%; align-items: center; margin-top: 10px;">
                                 <div
                                     style="width: 40px; height: 40px; border-radius: 50%; background-color: #e0e0e0d1; margin-right: 15px;">
-                                    <!-- Aquí se podrá agregar una imagen más tarde -->
                                 </div>
                                 <p style="font-size: 18px; color:#383838; margin: 0; line-height: 1.2;">Lorem ipsum</p>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -319,26 +351,29 @@
         </div>
     </section>
 
-
-
     <!-- Sección inferior -->
-    <footer class="footer py-1">
-        <div class="container">
-            <div class="footer-nav text-center mt-3">
-                <ul class="nav justify-content-center">
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Soluciones</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Documentos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Recursos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
-                </ul>
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row align-items-center" style="height: 30px; margin-bottom: 2%;">
+                <!-- Logo -->
+                <div class="col-9 col-lg-10 footer-logo">
+                    <img style="width: 7%;" src="assets/images/logo_blanco_grupolatbc.png" alt="Grupo LATBC Logo">
+                </div>
+                <!-- Social Icons -->
+                <div class="col-3 col-lg-2 footer-social d-flex" style="justify-content: end;">
+                    <a href="#" target="_blank"><img src="assets/images/icono lnk web .svg" alt="LinkedIn"></a>
+                    <a href="#" target="_blank"><img src="assets/images/icono email web.svg" alt="Email"></a>
+                    <a href="https://latbcconsulting.com/" target="_blank"><img src="assets/images/icono mundo web.svg" alt="Website"></a>
+                </div>
             </div>
-
-            <p class="text-center mt-3">Grupo Latbc © 2024 UI UX By Sharelytics</p>
+            <!-- Divider Line -->
+            <hr class="footer-divider" style="background-color: #fff;">
+            <!-- Copyright -->
+            <div class="footer-copyright" style="text-align: center;">
+                <p style="color: #fff; font-size: 0.7rem;">Copyright © 2024. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
-
-
     <div id="overlay"></div>
 
     <!-- Integración de scripts de Bootstrap -->

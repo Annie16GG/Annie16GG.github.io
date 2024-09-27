@@ -137,53 +137,51 @@ body {
     color: #3353A0;
 }
 
-/* Header */
-header {
-    background-color: white;
-    border-bottom: 1px solid #ddd;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; /* Asegúrate de que el header esté encima del contenido */
-    display: block;
-    padding: 2.9%;
+header{
+    padding:30px 0px;
+    background-color: #ffffff;
 }
 
 #cont-logo{
     margin-left: 7%;
-    width: 131px;
 }
 
-/* #logo{
-    height: 50%;
-    padding: 18px;
-    width: 131px;
-} */
-
-#menu{
-    margin-left:2.3%;
-}
-header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+#logo{
+    width: 70%;
 }
 
-header nav ul li {
-    margin-left: 25px;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: #3353A0;
+nav{
     font-family: roboto;
     font-size: 0.88rem;
 }
 
-header nav ul li a:hover {
+header .nav-item{
+    width: 120px;
+    text-align: center;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%2810, 10, 10, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+#contacto{
+    margin-left: 165px;
+}
+
+.nav-item a{
     color: #3353A0;
 }
+
+.nav-item a:hover{
+    color: blue;
+    background-color: rgba(189, 207, 207, 0.121);
+    border-radius: 15px;
+}
+
+#menu{
+    margin-left:2.3%;
+}
+
 
 
 /* Sección principal */
@@ -199,22 +197,24 @@ padding-left: 4%;
 }
 
 #texto-1 {
-    font-size: 9em;
-    font-family: roboto-medium;
-    letter-spacing: -4.29px;
+    font-size: 9.5vw; /* Ajusta el tamaño en función del ancho de la pantalla */
+    font-family: 'roboto-medium';
+    letter-spacing: -0.2vw;
     color: #263294;
     opacity: 1;
-    padding-top: 8%;
+    padding-top: 6vw; /* Padding relativo a la pantalla */
     text-align: left;
 }
-#texto-2{
-    font-size: 9.5em;
-    font-family: roboto-bold;
-    letter-spacing: -4.29px;
+
+#texto-2 {
+    font-size: 9.5vw; /* Ajuste responsivo del tamaño */
+    font-family: 'roboto-medium';
+    letter-spacing: -0.2vw;
     color: #263294;
     opacity: 1;
     text-align: left;
 }
+
 
 .main-section p{
     color:#263294;
@@ -230,6 +230,7 @@ padding-left: 4%;
 
 #mensaje1{
     padding-left: 10px;
+    font-size: 1.3rem;
 }
 
 #mensaje2{
@@ -268,6 +269,64 @@ padding-left: 4%;
     margin-top: 0; /* La primera caja no necesita superponerse */
 }
 
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .color-palette {
+        top: 30%;
+        right: 4%;
+        transform: translateY(-50%);
+    }
+
+    .color-box {
+        width: 50px;
+        height: 60px;
+        margin-top: -30px; /* Ajusta la superposición en pantallas más pequeñas */
+    }
+
+    .scroll-indicator {
+        margin-top: 20px;
+    }
+
+    header .nav-item {
+        text-align: left;
+        width: 100%; /* Para ocupar todo el ancho disponible */
+        margin-left: 0px;
+    }
+
+    #contacto {
+        margin-left: 0px !important;
+    }
+
+    #mensaje1{
+        padding-left: 0%;
+    }
+
+    #mensaje2{
+        margin-left: 0%;
+    }
+    
+    .col-10{
+        padding-left: 0%;
+    }
+}
+
+/* Estilos para pantallas pequeñas como móviles verticales */
+@media (max-width: 576px) {
+    .color-palette {
+        top: 50%;
+        right: 2%;
+        flex-direction: row; /* Las cajas se colocarán en fila en lugar de columna */
+        transform: translateY(-50%);
+        justify-content: space-between;
+    }
+
+    .color-box {
+        width: 40px;
+        height: 50px;
+        margin-top: -30; /* Ya no necesitas superposición en esta vista */
+    }
+}
+
 .color1 { background-color: #252057; }
 .color2 { background-color: #2F1046; }
 .color3 { background-color: #3354A0; }
@@ -285,53 +344,18 @@ padding-left: 4%;
 
 /* Footer */
 footer {
-    background-color: #3353A0;
-    padding: 20px;
+    background-color: #161931;
+    font-family: roboto;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 2%;
+    padding-bottom: 0.5%;
 }
 
-footer .footer-content {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
-    flex-wrap: wrap;
-}
 
-footer .left {
-    font-weight: bold;
-}
 
-footer .right {
-    max-width: 600px;
-}
-
-footer .footer-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-footer .footer-nav ul li {
-    margin: 0 15px;
-    font-family: roboto-light;
-}
-
-footer .footer-nav ul li a {
-    text-decoration: none;
-    color: white;
-}
-
-footer .footer-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-footer p {
-    text-align: center;
-    margin: 10px 0 0 0;
-    font-size: 0.9rem;
-    color: white;
-    font-family: roboto-light;
+.footer-social a{
+    margin-right: 10%;
 }
 
 .nav-item {
@@ -457,9 +481,16 @@ footer p {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0); /* Semi-transparente */
     display: none; /* Oculto inicialmente */
-    z-index: 999; /* Asegurarnos que esté encima de todo */
+    z-index: 9; /* Asegurarnos que esté encima de todo */
   }
 
+  .link-overlay {
+    position: fixed; /* Para que z-index funcione */
+    z-index: 10000; /* Mayor que el overlay */
+    color: #3353A0; /* O el color que desees */
+    font-weight: bold;
+    text-decoration: none;
+}
 
 /* Contenedor que agrupa el logo y el texto */
 .logo-and-text-container {
@@ -944,7 +975,7 @@ footer p {
     border-radius: 45px;
     padding-top: 10%;
     padding-left: 6%;
-    padding-right: 5%;
+    padding-right: 10%;
 }
 
 .text-box-purple{
@@ -961,8 +992,8 @@ footer p {
     letter-spacing: var(--unnamed-character-spacing-0);
     text-align: left;
     letter-spacing: 0px;
-    font-size: 17px; 
-    padding-top: 50px; 
+    font-size: 1rem; 
+    padding-top: 10px; 
     color: #383838;
     justify-content: center;
 }
@@ -971,7 +1002,8 @@ footer p {
     letter-spacing: var(--unnamed-character-spacing-0);
     text-align: left;
     letter-spacing: 0px;
-    font-size: 17px; 
+    font-size: 1rem; 
+    margin-top: 20px;
     color: #383838;
     justify-content: center;
 }

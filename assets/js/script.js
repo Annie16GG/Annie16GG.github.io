@@ -64,7 +64,7 @@ document.getElementById("scroll-button").addEventListener("click", function() {
         },
         {
             duration: 1.5,   // Aumenta la duración para una transición más suave
-            y: "-91%",
+            y: "-86%",
             x: "0%" ,
             opacity: 1,
             delay: 0.5, // Inicia después de que la primera animación termine
@@ -160,11 +160,11 @@ const patternBlue = document.getElementById('pattern-blue');
 const patternUx = document.getElementById('pattern-ux');
 const patternByo = document.getElementById('pattern-byo');
 const empresaLogo = document.getElementById('empresa-logo');
+const empresaPurple = document.getElementById('empresa-purple');
 const purpleIdeasText = document.getElementById('purple-ideas');
 const overlay = document.getElementById('overlay');
 // Función para animar la aparición de los divs
 function animateTextAndPattern() {
-    debugger;
     // Animar el text-div desde la derecha
     gsap.fromTo("#text-div", 
         { 
@@ -252,7 +252,7 @@ function animateTextAndPattern() {
             y: "-100%"  // Inicia fuera de la pantalla
         }, 
         { 
-            duration: 0.3,  
+            duration: 0.5,  
             y: "0%",  // Ajusta esta posición según sea necesario
             opacity:  0.68,  // Aparece gradualmente
             ease: "power2.out"
@@ -442,17 +442,18 @@ function restoreColumns() {
         
         gsap.to(col, { 
             flex: 1,  // Ajusta según el tamaño inicial de las columnas
-            duration: 0.2
+            duration: 0.2,
+            ease: "none"  // Animación lineal
         });
     });
 
-    // Restaurar los tamaños y posiciones originales de los logos
+    // Restaurar los tamaños y posiciones originales de los logos con animación lineal
     gsap.to('#empresa-logo', { 
         width: '120px', 
         x: 0, 
         y: 0, 
-        duration: 0.4,  // Aumenta la duración para un efecto más lento
-        ease: "power3.out",  // Función de easing suave
+        duration: 0.5,
+        ease: "none",  // Animación lineal
         delay: 0.2 
     });
     
@@ -460,47 +461,47 @@ function restoreColumns() {
         width: '100px', 
         x: 0, 
         y: 0, 
-        duration: 0.4, 
-        ease: "power3.out"
+        duration: 0.5, 
+        ease: "none"  // Animación lineal
     });
     
     gsap.to('#empresa-logo-red', { 
         width: '130px', 
         x: 0, 
         y: 0, 
-        duration: 0.4, 
-        ease: "power3.out"
+        duration: 0.5, 
+        ease: "none"  // Animación lineal
     });
     
     gsap.to('#empresa-logo-blue', { 
         width: '170px', 
         x: 0, 
         y: 0, 
-        duration: 0.4, 
-        ease: "power3.out"
+        duration: 0.5, 
+        ease: "none"  // Animación lineal
     });
     
     gsap.to('#empresa-logo-ux', { 
         width: '100px', 
         x: 0, 
         y: 0, 
-        duration: 0.4, 
-        ease: "power3.out"
+        duration: 0.5, 
+        ease: "none"  // Animación lineal
     });
     
     gsap.to('#empresa-logo-byo', { 
         width: '100px', 
         x: 0, 
         y: 0, 
-        duration: 0.4, 
-        ease: "power3.out"
+        duration: 0.5, 
+        ease: "none"  // Animación lineal
     });
 
     // Quitar cualquier transformación aplicada a los logos (si es necesario)
     gsap.to('.logo', { 
         clearProps: 'transform', 
-        duration: 0.4,  // Tiempo más prolongado para un ajuste suave
-        ease: "power3.out" 
+        duration: 0.5,  // Tiempo más prolongado para un ajuste suave
+        ease: "none"  // Animación lineal
     });
 }
 
