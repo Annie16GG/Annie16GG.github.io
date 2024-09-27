@@ -308,7 +308,16 @@ padding-left: 4%;
     .col-10{
         padding-left: 0%;
     }
+
+    .custom-column.expanded #empresa-logo {
+        top: 20% !important; 
+        left: 20% !important;
+        width: 10vh !important;
+        height: 10vw !important;
+        position: absolute !important;
+    }
 }
+
 
 /* Estilos para pantallas pequeñas como móviles verticales */
 @media (max-width: 576px) {
@@ -324,6 +333,14 @@ padding-left: 4%;
         width: 40px;
         height: 50px;
         margin-top: -30; /* Ya no necesitas superposición en esta vista */
+    }
+
+    .custom-column.expanded #empresa-logo {
+        top: 20% !important; 
+        left: 20% !important;
+        width: 10vh !important;
+        height: 10vw !important;
+        position: absolute !important;
     }
 }
 
@@ -351,8 +368,6 @@ footer {
     padding-top: 2%;
     padding-bottom: 0.5%;
 }
-
-
 
 .footer-social a{
     margin-right: 10%;
