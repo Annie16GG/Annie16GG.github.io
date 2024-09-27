@@ -681,7 +681,7 @@ footer {
     opacity: 1; /* Aparece el patrón */
     width: 572px;
     height: 697px;
-    position: absolute; /* Cambiar a 'absolute' para permitir el uso de left */
+    position: fixed; /* Cambiar a 'absolute' para permitir el uso de left */
     right: -11%; /* Ahora left funcionará */
 }
 
